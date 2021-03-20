@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html ng-app="testeFagronTech">
+<head>
+    <meta charset="utf-8" />
+    <title>Teste FagronTech</title>
+
+    <link href="Style/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Content/angular-material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-material.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-aria.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-messages.min.js"></script>
+    <script src="Scripts/angular-sanitize.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/indexController.js"></script>
+    <script src="app/controllers/homeController.js"></script>
+    <script src="app/controllers/lancarPontosController.js"></script>
+    <script src="app/controllers/verResultadosController.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+</head>
+<body>
+    <div ng-controller="indexController" style="width: 100%; overflow: hidden;" layout="row">
+        <div class="menu">
+            <nav class="{{active}}" flex="">
+                <a ng-href="#/!" class="home" ng-click="active='home'">Início</a>
+                <a ng-href="#!lancarPontos" class="lancarPontos" ng-click="active='lancarPontos'">Lançar pontos</a>
+                <a ng-href="#!verResultados" class="verResultados" ng-click="active='verResultados'">Ver resultados</a>
+            </nav>
+        </div>
+
+        <div id="main" class="main" flex="" >
+            <div ng-view></div>
+        </div>
+    </div>
+</body>
+</html>
+

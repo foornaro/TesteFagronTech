@@ -1,0 +1,28 @@
+﻿.menu {
+    height: 100vh;
+    float: left;
+    background-color: #eee;
+    padding:5px;
+}
+
+    .menu a {
+        background-color: #eee;
+        color: black;
+        display: block;
+        padding: 12px;
+        text-decoration: none;
+    }
+
+        .menu a:hover {
+            background-color: #ccc;
+        }
+
+nav.home .home,
+nav.lancarPontos .lancarPontos,
+nav.verResultados .verResultados {
+    background-color: #5867E3;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
