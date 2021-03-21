@@ -4,38 +4,44 @@
     <meta charset="utf-8" />
     <title>lançar pontos</title>
 </head>
-<body ng-controller="verResultadosController">
-    <table ng-if="Success">
-        <thead>
-            <tr><th colspan="2">Resultados de {{resultados.DataInicio}} à {{resultados.DataFim}}</th></tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Jogos disputados</td>
-                <td>{{resultados.JogosDisputados}}</td>
-            </tr>
-            <tr>
-                <td>Total de pontos marcados na temporada</td>
-                <td>{{resultados.TotalDePontosMarcados}}</td>
-            </tr>            
-            <tr>
-                <td>Média de pontos por jogo</td>
-                <td>{{resultados.MediaPorJogo}}</td>
-            </tr>            
-            <tr>
-                <td>Maior pontuação em um jogo</td>
-                <td>{{resultados.MaiorPontuacaoJogo}}</td>
-            </tr> 
-            <tr>
-                <td>Menor pontuação em um jogo</td>
-                <td>{{resultados.MenorPontuacaoJogo}}</td>
-            </tr>
-            <tr>
-                <td>Quantidade de vezes que bateu o próprio recorde</td>
-                <td>{{resultados.QuantidadeVezesRecorde}}</td>
-            </tr>
-        </tbody>
-    </table>
-    <h2 ng-if="!Success">Ocorreu um erro ao recuperar informações.</h2>
+<body>
+    <div layout-align="center center" ng-controller="verResultadosController" layout="column" ng-cloak>
+        <md-content layout-padding>
+            <div flex="">
+                <table ng-if="Success">
+                    <thead>
+                        <tr><th colspan="2">Resultados de {{resultados.DataInicio}} à {{resultados.DataFim}}</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jogos disputados</td>
+                            <td>{{resultados.JogosDisputados}}</td>
+                        </tr>
+                        <tr>
+                            <td>Total de pontos marcados na temporada</td>
+                            <td>{{resultados.TotalDePontosMarcados}}</td>
+                        </tr>
+                        <tr>
+                            <td>Média de pontos por jogo</td>
+                            <td>{{resultados.MediaPorJogo}}</td>
+                        </tr>
+                        <tr>
+                            <td>Maior pontuação em um jogo</td>
+                            <td>{{resultados.MaiorPontuacaoJogo}}</td>
+                        </tr>
+                        <tr>
+                            <td>Menor pontuação em um jogo</td>
+                            <td>{{resultados.MenorPontuacaoJogo}}</td>
+                        </tr>
+                        <tr>
+                            <td>Quantidade de vezes que bateu o próprio recorde</td>
+                            <td>{{resultados.QuantidadeVezesRecorde}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2 ng-if="!Success">Ocorreu um erro ao recuperar informações.</h2>
+            </div>
+        </md-content>
+    </div>
 </body>
 </html>
